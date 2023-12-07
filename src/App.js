@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
-
+import Cart from "./Components/Cart";
+import { Route,Routes } from "react-router-dom";
+import Home from "./Components/Home";
+import Blogs from "./Components/Blogs";
+import Contacts from "./Components/Contacts";
+import Display from "./Components/Display";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Display></Display>
+       <Routes>
+            <Route path="/home" element={<Home/>}/>
+            <Route path="/blogs" element={<Blogs/>}/>
+            <Route path="/contacts" element={<Contacts/>}/>
+       </Routes>
     </div>
   );
 }
 
 export default App;
+
+
+let arr =["happy","riya"]
+
+arr.map((name,index)=><p key={index}>{name}</p>)
